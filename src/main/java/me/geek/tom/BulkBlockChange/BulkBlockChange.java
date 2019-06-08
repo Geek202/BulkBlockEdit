@@ -1,13 +1,17 @@
-package me.geek.tom.plugin.BulkBlockChange;
+package me.geek.tom.BulkBlockChange;
 
-import me.geek.tom.plugin.BulkBlockChange.util.Perms;
-import me.geek.tom.plugin.BulkBlockChange.util.PluginLogger;
+import me.geek.tom.BulkBlockChange.actions.TaskManager;
+import me.geek.tom.BulkBlockChange.commands.CommandSet;
+import me.geek.tom.BulkBlockChange.util.Perms;
+import me.geek.tom.BulkBlockChange.util.PluginLogger;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BulkBlockChange extends JavaPlugin {
 
     public static BulkBlockChange plugin;
+
+    private TaskManager manager;
 
     public PluginLogger obtainLogger() {
         return logger;
@@ -28,6 +32,15 @@ public class BulkBlockChange extends JavaPlugin {
         Perms.load();
 
         logger.debug("Loaded permissions!");
+
+        logger.debug("Loading commands...");
+
+        getCommand("set").setExecutor(new CommandSet());
+
+        logger.debug("Loaded commands!");
+
+        manager = new TaskManager(getServer());
+        manager.runTaskTimerAsynchronously(this, 20, 20);
 
         // End onEnable section
         logger.info("onEnable:exit");

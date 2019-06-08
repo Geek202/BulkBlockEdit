@@ -1,4 +1,4 @@
-package me.geek.tom.plugin.BulkBlockChange.util;
+package me.geek.tom.BulkBlockChange.util;
 
 import java.util.logging.Logger;
 

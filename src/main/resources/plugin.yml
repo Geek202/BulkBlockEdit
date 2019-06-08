@@ -1,3 +1,8 @@
 name: BulkBlockChange
 version: 1.0-SNAPSHOT
-main: me.geek.tom.plugin.BulkBlockChange.BulkBlockChange
+main: me.geek.tom.BulkBlockChange.BulkBlockChange
+commands:
+  set:
+    description: set the current selection to a block
+    usage: /set <block>
+    aliases: []

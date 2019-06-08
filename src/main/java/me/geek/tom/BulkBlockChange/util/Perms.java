@@ -1,6 +1,6 @@
-package me.geek.tom.plugin.BulkBlockChange.util;
+package me.geek.tom.BulkBlockChange.util;
 
-import me.geek.tom.plugin.BulkBlockChange.BulkBlockChange;
+import me.geek.tom.BulkBlockChange.BulkBlockChange;
 import net.milkbowl.vault.permission.Permission;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
