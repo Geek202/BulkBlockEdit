@@ -6,3 +6,11 @@ commands:
     description: set the current selection to a block
     usage: /set <block>
     aliases: []
+  pos1:
+    description: set pos1
+    usage: /pos1
+    aliases: []
+  pos2:
+    description: set pos2
+    usage: /pos2
+    aliases: []
